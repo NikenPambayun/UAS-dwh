@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<div class="container">
+  <form action="/prediksi" method="post">
+    <div class="mt-xl-5 text-center align-self-center">
+      <h5 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 28pt;">Ini adalah aplikasi yang digunakan untuk melihat prediksi penjualan pertahun</h5><br><br>
+      <br>
+      <input
+        type="text"
+        name="tahun"
+        class="form-control w-50 mx-auto text-center"
+        id="formGroupExampleInput"
+        placeholder="Masukkan Tahun Prediksi"
+        style="background-color: whitesmoke;"
+      />
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      <p style="font-size: 1.2em; margin-top: 10px; 
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+      font-size: 20pt;">
+      {{ prediction_text }}
+    </p>
+    </div>
+  </form>
+</div>
+
+{%endblock%}
